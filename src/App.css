@@ -1,0 +1,95 @@
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box; 
+}/* Ensures padding and borders are included in the element's
+
+
+/* Make the entire page a flex container to center everything */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  width: 100%; /* makes sure it stretches horizontally */
+}
+
+/* The board container itself */
+.board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  padding: 15px;
+  border-radius: 12px;
+  background: #fff;
+}
+
+/* Each row in the board (3 buttons horizontally) */
+.row {
+  display: flex;
+}
+
+/* Styling for each square (button) */
+.board-size {
+  width: 80px;
+  height: 80px;
+  margin: 5px;
+  font-size: 2.5rem;
+  cursor: pointer;
+  border: 2px solid #333;
+  background-color: #fafafa;
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+  border-radius: 8px;
+
+  display: flex;            /* ✅ Center horizontally */
+  justify-content: center;  /* ✅ Center horizontally */
+  align-items: center;      /* ✅ Center vertically */
+}
+
+
+.board-size:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.board-size:focus {
+  outline: none;
+}
+
+/* Status text (next player or winner) */
+.status {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.5rem;
+}
+
+/* Reset button styling */
+.reset-btn {
+  display: block;
+  margin: 20px auto;
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.reset-btn:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
